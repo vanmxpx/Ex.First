@@ -1,22 +1,24 @@
 ﻿using System;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 
 namespace Ex1Nikita
 {
-    public class MainConsole: ConsoleLogic
+    public class MainConsole
     {
         public void openExersize(int ex)
         {
-            nameOnScreen();
+            NameOnScreen();
         }
 
-        public void nameOnScreen()
+        public void NameOnScreen()
         {
             Console.Clear();
+
             Console.WriteLine("+-------------------------------+");
             Console.WriteLine("Tsyhankov Nikita Dmitriyevich");
             Console.WriteLine("+-------------------------------+");
+
+            Console.WriteLine("*----------------------*");
+            Console.WriteLine("Choose another exersize");
         }
     }
 }

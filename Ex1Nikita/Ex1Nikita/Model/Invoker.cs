@@ -19,7 +19,7 @@ namespace Ex1Nikita
         string[] category2 = { "1. Larger of two",
             "2. \"Mew or Raf\"",
             "3. Month",
-            "4. 1 or 2",
+            "4. 1 or 0",
             "5. Day of week",
             "6. Taxi",
             "7. A prime number",
