@@ -1,18 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using Ex1Nikita.Units;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Ex1Nikita
 {
     public class Invoker
     {
-        public interface IOpenExersize
-        {
-           void openExersize(int ex);
-        }
+        /// <summary>
+        /// Класс для исполненительных методов
+        /// </summary>
 
         #region Units
-
         MainConsole Unit1 = new MainConsole();
+        TypeOfData Unit2 = new TypeOfData();
+
         public List<string[]> unitsList = new List<string[]>();
         string[] category1 = { "1. Name on Screen" };
         string[] category2 = { "1. Larger of two",
@@ -45,7 +46,6 @@ namespace Ex1Nikita
         public void OpenExersize (int un, int ex)
         {
             if (-1 == un) MessageBox.Show("Choose an unit", "Oops!", MessageBoxButtons.OK);
-            else if (-1 == ex) MessageBox.Show("Choose a exersize", "Oops!", MessageBoxButtons.OK);
             else checkUnit(un, ex);
         }
 
@@ -56,14 +56,13 @@ namespace Ex1Nikita
                 case 0:
                     Unit1.openExersize(ex);
                     break;
-                case 2:
-                    //Unit2.openExersize(ex);
+                case 1:
+                    Unit2.openExersize(ex);
                     break;
                 default:
                     //Unit3.openExersize(ex);
                     break;
             }
-
         }
     }
 }

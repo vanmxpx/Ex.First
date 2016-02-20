@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Ex1Nikita
@@ -15,6 +16,7 @@ namespace Ex1Nikita
             InitializeComponent();
         }
 
+
         private void butOpen_Click(object sender, EventArgs e)
         {
             invoker.OpenExersize(unit, exersize);
@@ -24,11 +26,12 @@ namespace Ex1Nikita
             unit = unitComboBox.SelectedIndex;
             exersizeComboBox.Items.Clear();
             exersizeComboBox.Items.AddRange(invoker.unitsList[unit]);
+            exersizeComboBox.SelectedIndex = 0;
         }
 
         private void exersizeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            exersize = unitComboBox.SelectedIndex;
+            exersize = exersizeComboBox.SelectedIndex;
         }
     }
 }
