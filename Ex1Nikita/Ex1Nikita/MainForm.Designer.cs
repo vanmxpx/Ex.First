@@ -43,6 +43,7 @@
             this.butOpen.TabIndex = 0;
             this.butOpen.Text = "Open";
             this.butOpen.UseVisualStyleBackColor = true;
+            this.butOpen.Click += new System.EventHandler(this.butOpen_Click);
             // 
             // lblCategory
             // 
@@ -85,6 +86,7 @@
             this.exersizeComboBox.Size = new System.Drawing.Size(121, 21);
             this.exersizeComboBox.TabIndex = 5;
             this.exersizeComboBox.Text = "(choose)";
+            this.exersizeComboBox.SelectedIndexChanged += new System.EventHandler(this.exersizeComboBox_SelectedIndexChanged);
             // 
             // MainForm
             // 

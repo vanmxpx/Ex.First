@@ -1,31 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ex1Nikita
 {
     public partial class MainForm : Form
     {
-        public int unit = 0;
+        #region items
+        public int unit = -1, exersize = -1;
         Invoker invoker = new Invoker();
+        #endregion
 
         public MainForm()
         {
             InitializeComponent();
         }
 
+        private void butOpen_Click(object sender, EventArgs e)
+        {
+            invoker.OpenExersize(unit, exersize);
+        }
         private void unitComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            unitComboBox.SelectedIndex = unit;
+            unit = unitComboBox.SelectedIndex;
             exersizeComboBox.Items.Clear();
             exersizeComboBox.Items.AddRange(invoker.unitsList[unit]);
-            unitComboBox.Invalidate();
+        }
+
+        private void exersizeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            exersize = unitComboBox.SelectedIndex;
         }
     }
 }
