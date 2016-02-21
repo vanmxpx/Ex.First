@@ -108,37 +108,54 @@ namespace Ex1Nikita.Units
         {
             Console.WriteLine("Enter 5 numbers by space:");
             Console.Write("==> ");
-
+            string[] array = Console.ReadLine().Split(' ');
+            int sum = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum += Convert.ToInt16(array[i]);
+            }
+            Console.WriteLine("The arithmetic mean of these numbers: {0}", sum /= 5);
         }
 
         private void AverageRandom()
         {
-            Console.Clear();
-
-
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
+            Random rnd = new Random();
+            Console.WriteLine("I have conceived a 5 numbers from 1 to 200");
+            int sum = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(sum += rnd.Next(1, 200));
+            }
+            Console.WriteLine("The arithmetic mean of these numbers: {0}", sum /= 5);
         }
 
         private void Paws()
         {
-            Console.Clear();
-
-
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
+            Console.WriteLine("So, we have 64 paws\n it can be:");
+            for (int gooses = 0, rabbits = 16; rabbits >= 0; rabbits--)
+            {
+                Console.WriteLine("{0} rabbits and {1} gooses", rabbits, gooses);
+                gooses += 2;
+            }
         }
 
         private void Password()
         {
-            Console.Clear();
-
-
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
+            Console.WriteLine("Stop!\nEnter the password:");
+            bool pass = false;
+            while (!pass)
+            {
+                Console.Write("==> ");
+                if(Console.ReadLine() == "root")
+                {
+                    Console.WriteLine("Correct. You passed.");
+                    pass = true;
+                }
+                else
+                {
+                    Console.WriteLine("Incorect password, try again.");
+                }
+            }
         }
 
 
