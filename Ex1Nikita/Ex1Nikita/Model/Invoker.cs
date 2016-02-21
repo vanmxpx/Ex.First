@@ -1,6 +1,7 @@
 ﻿using Ex1Nikita.Units;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System;
 
 namespace Ex1Nikita
 {
@@ -13,6 +14,7 @@ namespace Ex1Nikita
         #region Units
         MainConsole Unit1 = new MainConsole();
         TypeOfData Unit2 = new TypeOfData();
+        Cycles Unit3 = new Cycles();
 
         public List<string[]> unitsList = new List<string[]>();
         string[] category1 = { "1. Name on Screen" };
@@ -25,14 +27,14 @@ namespace Ex1Nikita
             "7. A prime number",
             "8. Lottery",
             "9. Currency converter" };
-        string[] category3 = {"1. ",
-            "2. ",
-            "3. ",
-            "4. ",
-            "5. ",
-            "6. ",
-            "7. ",
-            "8. " };
+        string[] category3 = {"1. Multiplication table",
+            "2. Digit",
+            "3. Guess",
+            "4. Cubes",
+            "5. Average from console",
+            "6. Average random",
+            "7. Paws",
+            "8. Password" };
         #endregion
 
 
@@ -46,11 +48,12 @@ namespace Ex1Nikita
         public void OpenExersize (int un, int ex)
         {
             if (-1 == un) MessageBox.Show("Choose an unit", "Oops!", MessageBoxButtons.OK);
-            else checkUnit(un, ex);
+            else CheckUnit(un, ex);
         }
 
-        public void checkUnit (int un, int ex)
+        public void CheckUnit (int un, int ex)
         {
+            Console.Clear();
             switch (un)
             {
                 case 0:
@@ -60,9 +63,11 @@ namespace Ex1Nikita
                     Unit2.openExersize(ex);
                     break;
                 default:
-                    //Unit3.openExersize(ex);
+                    Unit3.openExersize(ex);
                     break;
             }
+            Console.WriteLine("*----------------------*");
+            Console.WriteLine("Choose another exersize");
         }
     }
 }

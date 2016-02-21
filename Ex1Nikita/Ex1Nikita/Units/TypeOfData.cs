@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Ex1Nikita.Units
 {
@@ -46,8 +41,6 @@ namespace Ex1Nikita.Units
         #region Unit's methods
         private void LargerOfTwo()
         {
-            Console.Clear();
-
             Console.WriteLine("Enter first number:");
             Console.Write("==> ");
             int a = Convert.ToInt16(Console.ReadLine());
@@ -55,28 +48,18 @@ namespace Ex1Nikita.Units
             Console.Write("==> ");
             int b = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Maximum {0}", ( a > b ) ? a : b);
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
 
         private void MewOrRaw()
         {
-            Console.Clear();
-
             Console.WriteLine("Mew or Raw?");
             string voice = Console.ReadLine();
             if (voice == "Mew" || voice == "mew") Console.WriteLine("Feed the cat");
             else Console.WriteLine("Walk the dog");
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
 
         private void Month()
         {
-            Console.Clear();
-
             Console.WriteLine("Enter number of month:");
             Console.Write("==>");
             int mounth = Convert.ToInt16(Console.ReadLine());
@@ -84,28 +67,18 @@ namespace Ex1Nikita.Units
             else if (mounth > 5 && mounth < 9) Console.WriteLine("Summer");
             else if (mounth > 8 && mounth < 12) Console.WriteLine("Autumn");
             else Console.WriteLine("Winter");
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
 
         public void OneOrZero()
         {
-            Console.Clear();
-
             Console.WriteLine("Write 1 or 0:");
             Console.Write("==>");
             int number = Console.Read();
             Console.WriteLine("{0}", (1 == number) ? "Good" : "Bad");
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
 
         private void DayOfWeek()
         {
-            Console.Clear();
-
             Console.WriteLine("Enter number of week");
             Console.Write("==>");
             int day = Convert.ToInt16(Console.ReadLine());
@@ -133,15 +106,10 @@ namespace Ex1Nikita.Units
                     Console.WriteLine("Saturday");
                     break;
             }
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
 
         private void Taxi()
         {
-            Console.Clear();
-
             Console.WriteLine("How many km gone?");
             Console.Write("==> ");
             int km = Convert.ToInt16(Console.ReadLine());
@@ -156,15 +124,10 @@ namespace Ex1Nikita.Units
             }
             cost += min;
             Console.WriteLine("The final price: \n {0} grn", cost);
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
 
         private void APrimeNumber()
         {
-            Console.Clear();
-
             Console.WriteLine("Enter a number");
             Console.Write("==> ");
             int num = Convert.ToInt16(Console.ReadLine());
@@ -181,15 +144,10 @@ namespace Ex1Nikita.Units
                     if (i == num / 2) Console.WriteLine("This is a prime number");
                 }
             }
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
 
         private void Lottery()
         {
-            Console.Clear();
-
             Console.WriteLine("*---Lottery---*");
             Console.WriteLine("Enter your beat:");
             Console.Write("==> ");
@@ -214,19 +172,14 @@ namespace Ex1Nikita.Units
                 Console.WriteLine("Your win! Beat x10");
                 Console.WriteLine("Final win: {0}", beat * 10);
             }
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
 
         private void CurrencyConverter()
         {
-            Console.Clear();
-
             Console.WriteLine("Enter your sum:");
             Console.Write("==> ");
             double sum = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Press '1' if it is UAN\n '2' if it is USD\n '3' if it is EUR");
+            Console.WriteLine("Press '1' if it is UAN\n   '2' if it is USD\n   '3' if it is EUR");
             if(Console.ReadKey().Key == ConsoleKey.D1)
             {
                 Console.WriteLine("to USD: {0}", sum / 27);
@@ -242,9 +195,6 @@ namespace Ex1Nikita.Units
                 Console.WriteLine("to USD: {0}", sum * 1.07);
                 Console.WriteLine("to UAN: {0}", sum * 30);
             }
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
         #endregion
     }

@@ -102,7 +102,7 @@
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Test 1";
+            this.Text = "Exersizes";
             this.ResumeLayout(false);
             this.PerformLayout();
 

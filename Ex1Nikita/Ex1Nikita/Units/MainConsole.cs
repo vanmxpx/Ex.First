@@ -11,14 +11,9 @@ namespace Ex1Nikita
 
         public void NameOnScreen()
         {
-            Console.Clear();
-
             Console.WriteLine("+-------------------------------+");
             Console.WriteLine("Tsyhankov Nikita Dmitriyevich");
             Console.WriteLine("+-------------------------------+");
-
-            Console.WriteLine("*----------------------*");
-            Console.WriteLine("Choose another exersize");
         }
     }
 }

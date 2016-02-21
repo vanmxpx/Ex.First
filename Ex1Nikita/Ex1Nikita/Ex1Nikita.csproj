@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Invoker.cs" />
+    <Compile Include="Units\Cycles.cs" />
     <Compile Include="Units\MainConsole.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
