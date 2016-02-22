@@ -70,7 +70,7 @@ namespace ConsoleModel
             {
                 int dig = 1;
 
-                while (num > 10)
+                while (num > 10 || num < -10)
                 {
                     num /= 10;
                     dig++;
@@ -95,7 +95,12 @@ namespace ConsoleModel
                 }
                 else
                 {
-                    if (num > userNum)
+                    if (userNum > 146 || userNum < 1)
+                    {
+                        Console.WriteLine("It is a number from 1 to 146");
+                        Console.WriteLine("Try one more:");
+                    } 
+                    else if (num > userNum)
                     {
                         Console.WriteLine("More");
                         Console.WriteLine("Try one more:");
@@ -145,7 +150,7 @@ namespace ConsoleModel
             bool check = true;
             for (int i = 0; i < array.Length; i++)
             {
-                if (!Int32.TryParse(array[i], out num))
+                if (!Int32.TryParse(array[i], out num) || array.Length != 5)
                 {
                     check = false;
                 }
@@ -154,7 +159,7 @@ namespace ConsoleModel
             if(check) Console.WriteLine("The arithmetic mean of these numbers: {0}", sum /= 5);
             else
             {
-                Console.WriteLine("Wrong input, not numbers. Try again");
+                Console.WriteLine("Wrong input, not all numbers. Try again");
                 AverageFromConsole();
             }
         }

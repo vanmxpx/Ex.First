@@ -12,7 +12,6 @@ namespace ConsoleModel
         {
             Invoker invoker = new Invoker();
             invoker.OpenUnit();
-
         }
     }
 }

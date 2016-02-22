@@ -112,7 +112,7 @@ namespace ConsoleModel
             Console.WriteLine("Enter number of week");
             Console.Write("==>");
             int day = 0;
-            if (!Int32.TryParse(Console.ReadLine(), out day))
+            if (!Int32.TryParse(Console.ReadLine(), out day) || day < 1 || day > 7)
             {
                 Console.WriteLine("Wrong! Try another");
                 DayOfWeek();
@@ -185,7 +185,7 @@ namespace ConsoleModel
             Console.WriteLine("Enter a number");
             Console.Write("==> ");
             int num = 0;
-            if (!Int32.TryParse(Console.ReadLine(), out num) || num < 0)
+            if (!Int32.TryParse(Console.ReadLine(), out num) || num < 1)
             {
                 Console.WriteLine("Wrong! Try another");
                 APrimeNumber();
