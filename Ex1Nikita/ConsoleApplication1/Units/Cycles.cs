@@ -60,8 +60,8 @@ namespace ConsoleModel
         {
             Console.WriteLine("Enter a number:");
             Console.Write("==> ");
-            int num = 0;
-            if (!Int32.TryParse(Console.ReadLine(), out num))
+            long num = 0;
+            if (!Int64.TryParse(Console.ReadLine(), out num))
             {
                 Console.WriteLine("Wrong! Try another");
                 Digit();
