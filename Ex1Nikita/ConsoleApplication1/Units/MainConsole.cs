@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ex1Nikita
+namespace ConsoleModel
 {
     public class MainConsole
     {

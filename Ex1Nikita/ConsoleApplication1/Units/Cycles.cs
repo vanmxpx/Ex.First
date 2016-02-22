@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ex1Nikita.Units
+namespace ConsoleModel
 { 
     class Cycles
     {
@@ -8,25 +8,25 @@ namespace Ex1Nikita.Units
         {
             switch (ex)
             {
-                case 0:
+                case 1:
                     MultiplicationTable();
                     break;
-                case 1:
+                case 2:
                     Digit();
                     break;
-                case 2:
+                case 3:
                     Guess();
                     break;
-                case 3:
+                case 4:
                     Cubes();
                     break;
-                case 4:
+                case 5:
                     AverageFromConsole();
                     break;
-                case 5:
+                case 6:
                     AverageRandom();
                     break;
-                case 6:
+                case 7:
                     Paws();
                     break;
                 default:
@@ -40,11 +40,19 @@ namespace Ex1Nikita.Units
         {
             Console.WriteLine("Enter your number:");
             Console.Write("==> ");
-            int num = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine("Multiplication table on {0}:", num);
-            for(int i = 1; i < 21; i++)
+            int num = 0;
+            if (!Int32.TryParse(Console.ReadLine(), out num))
             {
-                Console.WriteLine("==> {0}*{1}={2}", num, i, num*i);
+                Console.WriteLine("Wrong! Try another");
+                MultiplicationTable();
+            }
+            else
+            {
+                Console.WriteLine("Multiplication table on {0}:", num);
+                for (int i = 1; i < 21; i++)
+                {
+                    Console.WriteLine("==> {0}*{1}={2}", num, i, num * i);
+                }
             }
         }
 
@@ -52,15 +60,23 @@ namespace Ex1Nikita.Units
         {
             Console.WriteLine("Enter a number:");
             Console.Write("==> ");
-            int num = Convert.ToInt16(Console.ReadLine());
-            int dig = 1;
-
-            while (num > 10)
+            int num = 0;
+            if (!Int32.TryParse(Console.ReadLine(), out num))
             {
-                num /= 10;
-                dig++;
+                Console.WriteLine("Wrong! Try another");
+                Digit();
             }
-            Console.WriteLine("Digit is {0}", dig);
+            else
+            {
+                int dig = 1;
+
+                while (num > 10)
+                {
+                    num /= 10;
+                    dig++;
+                }
+                Console.WriteLine("Digit is {0}", dig);
+            }
         }
 
         private void Guess()
@@ -72,35 +88,50 @@ namespace Ex1Nikita.Units
             while (!answer)
             {
                 Console.Write("==> ");
-                int userNum = Convert.ToInt16(Console.ReadLine());
-                if (num > userNum)
+                int userNum = 0;
+                if (!Int32.TryParse(Console.ReadLine(), out userNum))
                 {
-                    Console.WriteLine("More");
-                    Console.WriteLine("Try one more:");
-                }
-                else if (num < userNum)
-                {
-                    Console.WriteLine("Less");
-                    Console.WriteLine("Try one more:");
+                    Console.WriteLine("Not a number, again");
                 }
                 else
                 {
-                    Console.WriteLine("Yes, it is {0}!", userNum);
-                    answer = true;
+                    if (num > userNum)
+                    {
+                        Console.WriteLine("More");
+                        Console.WriteLine("Try one more:");
+                    }
+                    else if (num < userNum)
+                    {
+                        Console.WriteLine("Less");
+                        Console.WriteLine("Try one more:");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Yes, it is {0}!", userNum);
+                        answer = true;
+                    }
                 }
             }
         }
 
         private void Cubes()
         {
-            Console.WriteLine("Enter a number:");
+            Console.WriteLine("Enter a number for cubes:");
             Console.WriteLine("==> ");
-            int num = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine("Cubes of numbers until {0}:", num);
-            for(int i = 1; i*i < num; i++)
+            int num = 0;
+            if (!Int32.TryParse(Console.ReadLine(), out num) || num < 0)
             {
-                if( (i+1)*(i+1) >= num) Console.WriteLine("{0}.", i * i);
-                else Console.Write("{0}, ", i * i);
+                Console.WriteLine("Wrong! Try another");
+                Cubes();
+            }
+            else
+            {
+                Console.WriteLine("Cubes of numbers until {0}:", num);
+                for (int i = 1; i * i < num; i++)
+                {
+                    if ((i + 1) * (i + 1) >= num) Console.WriteLine("{0}.", i * i);
+                    else Console.Write("{0}, ", i * i);
+                }
             }
         }
 
@@ -110,11 +141,22 @@ namespace Ex1Nikita.Units
             Console.Write("==> ");
             string[] array = Console.ReadLine().Split(' ');
             int sum = 0;
+            int num = 0;
+            bool check = true;
             for (int i = 0; i < array.Length; i++)
             {
-                sum += Convert.ToInt16(array[i]);
+                if (!Int32.TryParse(array[i], out num))
+                {
+                    check = false;
+                }
+                else sum += num;
             }
-            Console.WriteLine("The arithmetic mean of these numbers: {0}", sum /= 5);
+            if(check) Console.WriteLine("The arithmetic mean of these numbers: {0}", sum /= 5);
+            else
+            {
+                Console.WriteLine("Wrong input, not numbers. Try again");
+                AverageFromConsole();
+            }
         }
 
         private void AverageRandom()

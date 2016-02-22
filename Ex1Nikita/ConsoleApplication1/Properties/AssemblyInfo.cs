@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Ex1Nikita")]
+[assembly: AssemblyTitle("ConsoleModel")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Ex1Nikita")]
+[assembly: AssemblyProduct("ConsoleModel")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("14af6bfe-a5ea-4240-8425-e7bc9222f168")]
+[assembly: Guid("c78abcf4-5b38-41c3-b1cb-a41ae8bf3fb9")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
