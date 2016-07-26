@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="55720b60-287c-4b92-92ba-4df455a7d00f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://nickservice:8088/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="06287746-7a83-4925-9280-3e21f1c440e3" SourceId="1" SourceUrl="https://nickservice:8088/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="ec3ed9ce-4d81-4d92-bd58-48e1a3581bd6" SourceId="1" SourceUrl="https://nickservice:8088/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="6577eb3a-3022-45ec-9d76-99f880f3e579" SourceId="1" SourceUrl="https://nickservice:8088/mex" />
+    <MetadataFile FileName="DomainModel1.xsd" MetadataType="Schema" ID="0b062202-fe15-43ff-8e01-0e8919fdd101" SourceId="1" SourceUrl="https://nickservice:8088/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

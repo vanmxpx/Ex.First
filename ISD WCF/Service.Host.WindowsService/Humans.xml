@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Humans>
+  <Human Id ="1">
+    <Age>32</Age>
+    <Sex>Male</Sex>
+    <Name>Indi</Name>
+  </Human>
+  <Human Id ="2">
+    <Age>12</Age>
+    <Sex>Female</Sex>
+    <Name>Wick</Name>
+  </Human>
+  <Human Id ="3">
+    <Age>81</Age>
+    <Sex>Male</Sex>
+    <Name>Crist</Name>
+  </Human>
+  <Human Id ="3">
+    <Age>17</Age>
+    <Sex>Female</Sex>
+    <Name>Ann</Name>
+  </Human>
+</Humans>
