@@ -1,0 +1,16 @@
+CA cert
+makecert.exe -sv SignRoot.pvk -r signroot.cer -n "CN=CACert"
+
+service cert
+makecert.exe -iv SignRoot.pvk -ic signroot.cer -sk nickservice -n CN="nickservice" -ss my -sr localmachine -sky exchange -pe
+
+reserve an url
+netsh http delete sslcert ipport=0.0.0.0:1234
+netsh http add urlacl url=https://+:8088/ user=\Everyone
+
+set the sll port with cert
+netsh http add sslcert ipport=0.0.0.0:8088 certhash=fff3a5345871dca022fa3cbdc7fc6cb32560a98b appid={ea232459-b6da-4d52-b8fa-abe61068bc15}
+
+http://localhost:8080/MainService/Message
+https://nickservice:8088/MainService/TransportWithMessage
+https://nickservice:8088/MainService/Transport
